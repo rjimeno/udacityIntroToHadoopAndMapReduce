@@ -13,7 +13,7 @@ def reducer():
         size = len(d[w])
         s = set(d[w])
         l = list(s)
-        l.sort()
+        l.sort(key=int)
         print w, '\t', size, '\t', '\t'.join(l)
 
 if '__main__' == __name__:

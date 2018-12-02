@@ -7,7 +7,6 @@ def reducer():
     reader = csv.reader(sys.stdin, delimiter='\t')
     d = {}
     for line in reader:
-        print line
         word, node = line
         d.setdefault(word, []).append(node)
     for w in d:

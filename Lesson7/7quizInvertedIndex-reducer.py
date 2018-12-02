@@ -10,8 +10,8 @@ def reducer():
         word, node = line
         d.setdefault(word, []).append(node)
     for w in d:
-        print w, '\t', '\t'.join(d[w])
-    return d
+        d[w].sort()
+        print w, '\t', len(d[w]), '\t', '\t'.join(d[w])
 
 if '__main__' == __name__:
-    d = reducer()
+    reducer()
